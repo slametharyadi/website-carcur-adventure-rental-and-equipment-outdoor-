@@ -1,0 +1,395 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    height: 4020px;
+    background-color: rgb(0, 0, 0);
+    margin: 10px auto;
+}
+
+/* awal navbar */
+
+.container h1,h2,h3,p{
+    color: white;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar ul{
+    display: grid;
+    grid-template-columns: repeat (auto-fit, minmax(100px, 1fr));
+    grid-auto-flow:column;
+    list-style: none;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.navbar ul a{
+    display: block; 
+    /* display block agar bs di klik di luar tulisannya */
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    background-color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+ul a:hover{
+    background-color: white;
+    color: black;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+}
+
+.menu-toggle input{
+    display: none;
+}
+
+/* akhir navbar */
+
+/* awal landing page */
+.landingpage{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    text-align: center;
+    margin-top: 120px;
+}
+.button{
+    width: 120px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    margin: 60px auto;
+}
+.button a{
+    color: black;
+    text-decoration: none;
+    margin: auto;
+}
+
+.button:hover{
+    transform: scale(1.2,1.5);
+    transition: all 0.5s;
+}
+
+.right img{
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+/* akhir landing page */
+
+/* awal about */
+.about h1,h3,p{
+    text-align: center;
+}
+
+.about h3{
+    margin-bottom: 100px;
+}
+
+.about p{
+    padding: 0 40px 0 40px;
+}
+
+.about{
+    margin-top: 120px;
+}
+/* akhir about */
+
+/* awal list */
+.list h1{
+    text-align: center;
+}
+
+.list{
+    margin-top: 320px;
+}
+
+.box{
+    width: 180px;
+    height: 280px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.box figure figcaption{
+    background-color:black;
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    color:white; 
+
+}
+
+.box img{
+    width: 130px;
+    height: 150px;
+    margin-left: -15px;
+}
+
+.katalog{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 20px;
+
+}
+/* akhir list */
+
+/* awal aturan */
+
+.rule{
+    display: flex;
+}
+
+.aturan{
+    margin-top: 140px;
+}
+
+.aturan h1{
+    text-align: center;
+}
+
+.aturan li{
+    margin: 10px auto;
+    color: white;
+}
+
+.aturan ol{
+    margin: auto;
+}
+/* akhir aturan */
+
+/* awal contact */
+.sosialmedia{
+    width: 50%;
+    height: 30vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+}
+
+
+.contact img{
+    width: 60px;
+    height: 60px;
+}
+
+.contact a{
+    margin: auto;
+}
+
+.contact{
+    display: flex;
+    margin-top:280px ;
+    margin-bottom: 230px;
+}
+
+.kiri{
+    flex: 2;
+}
+
+.kanan{
+    flex: 1;
+}
+
+.kiri h1,p{
+    text-align: center;
+}
+
+.kanan h1{
+    text-align: center;
+    font-size: 18px;
+}
+/* akhkir contact */
+
+/* awal footer */
+footer{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    display: flex;
+}
+
+footer p{
+    color: white;
+    margin: auto;
+}
+/* akhir footer */
+
+/* media query */
+
+@media (max-width: 970px) { 
+    #navbar ul{
+        position: absolute;
+        top: -6px;
+        left: -10px;
+        background-color:black;
+        display: flex;
+        height: 100vh;
+        width: 50vw;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+
+    .menu-toggle input{
+        display: block;
+    }
+
+    #navbar ul.slide{
+       transform: translateX(0);
+    }
+
+    #navbar{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+
+    .landingpage{
+        display: grid;
+        grid-template-columns:none ;
+    }
+
+    .left{
+        width: 50%;
+        margin: auto;
+    }
+
+    .logo h1{
+        font-size: 34px;
+    }
+
+    #list{
+        margin-top: 480px;
+    }
+    
+
+    #alamat{
+        margin-top: 500px;
+    }
+
+    .container{
+        height: 4750px;
+    }
+
+    .sosialmedia{
+        width: 50%;
+        height: 100px;
+    }
+
+    /* hamburger menu */
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    height: 40px;
+    width: 28px;
+    opacity: 0;
+    top: -10px;
+    left: -3px;
+    cursor: pointer;
+}
+
+
+.menu-toggle span{
+    width: 28px;
+    height: 3px;
+    display: block;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 1s;
+}
+
+/* hamburger menu animation */
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg)translate(-1px, -1px) ;
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg)translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+}
+
+@media (max-width: 665px) { 
+    .katalog{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar h1{
+        font-size: 1.5em;
+    }
+
+    .left h1{
+        font-size: 1.5em;
+    }
+
+    .left h2{
+        font-size: 1em;
+    }
+
+    .contact{
+       display: grid;
+    }
+
+    .container{
+        height: 5700px;
+    }
+
+}
+
+@media (max-width: 430px) { 
+    .katalog{
+        grid-template-columns: 1fr;
+    }
+
+    .container{
+        height: 8000px;
+    }
+
+}
