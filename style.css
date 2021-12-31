@@ -393,3 +393,9 @@ footer p{
     }
 
 }
+
+@media (max-width: 273px) { 
+    .container{
+        height: 8420px;
+    }
+}
